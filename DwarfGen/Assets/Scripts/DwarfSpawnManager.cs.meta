@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 9da4882e3adf49048858aa24c6ecc4da
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - currentDwarf: {instanceID: 0}
+  - dwarfPrefab: {fileID: 1791760066520198965, guid: 59a1d476a37eaef4f80584df21ccca91, type: 3}
+  - spawnPosition: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

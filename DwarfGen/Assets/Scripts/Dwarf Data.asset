@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96e30bbdf5623414f9436ef3c3c80eec, type: 3}
+  m_Name: Dwarf Data
+  m_EditorClassIdentifier: 
+  Gender:
+  - Male
+  - Female
+  MaleFirstNameList:
+  - Nunruk
+  - Kamlam
+  - Gisor
+  - Brilrin
+  - Mirlin
+  - Dubi
+  - Doin
+  - Kugo
+  - Lun
+  - Gale
+  FemaleFirstNameList:
+  - Ailana
+  - Dimna
+  - Thorga
+  - Bavana
+  - Gathlia
+  - Glotha
+  - Melvura
+  - Thotha
+  - Aida
+  - Avola
+  familyNameList:
+  - Beastbane
+  - Marbleflayer
+  - Trollbraids
+  - Redarmour
+  - Pebblefall
+  - Kegforge
+  - Wraithview
+  - Magmagrip
+  - Chaosborn
+  - Granitemail
+  dwarfPrefabs:
+  - {fileID: 1791760066520198965, guid: 59a1d476a37eaef4f80584df21ccca91, type: 3}
