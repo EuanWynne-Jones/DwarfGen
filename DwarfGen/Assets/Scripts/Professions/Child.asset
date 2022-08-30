@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c1dcd2ed4a71a94f8224f7e22fdd23e, type: 3}
-  m_Name: Hunter
+  m_Name: Child
   m_EditorClassIdentifier: 
   mining: 0
   masonry: 0
@@ -24,10 +24,10 @@ MonoBehaviour:
   beekeeping: 0
   spinning: 0
   cooking: 0
-  animalCare: 1
-  animalTraining: 1
-  trapping: 1
-  butchery: 1
+  animalCare: 0
+  animalTraining: 0
+  trapping: 0
+  butchery: 0
   fishing: 0
   fishCleaning: 0
   fishDisection: 0
@@ -45,6 +45,6 @@ MonoBehaviour:
   woundDressing: 0
   patientCare: 0
   surgery: 0
-  recoveringWounded: 1
+  recoveringWounded: 0
   suturing: 0
-  hauling: 1
+  hauling: 0

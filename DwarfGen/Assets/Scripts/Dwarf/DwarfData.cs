@@ -10,6 +10,7 @@ public class DwarfData : MonoBehaviour
     public ProfessionScriptableObject currentDwarfProfession;
     public ProfessionData professions;
 
+    public ProfessionScriptableObject child;
 
     public string genderText;
     public string firstNameText;
@@ -41,7 +42,6 @@ public class DwarfData : MonoBehaviour
 
     public void DwarfGenerator()
     {
-
         genderText = currentDwarf.Gender[Random.Range(0, currentDwarf.Gender.Length)];
         if (genderText == "Male")
         {
@@ -51,11 +51,22 @@ public class DwarfData : MonoBehaviour
             {
                 firstNameText = currentDwarf.FemaleFirstNameList[Random.Range(0, currentDwarf.FemaleFirstNameList.Length)];
             }
-
         familyNameText = currentDwarf.familyNameList[Random.Range(0, currentDwarf.familyNameList.Length)];
-        dwarfAgeText = currentDwarf.dwarfAge = Random.Range(25, 170);
+
+        dwarfAgeText = currentDwarf.dwarfAge = Random.Range(21 , 175);
 
         currentDwarfProfession = professions.allProfessions[Random.Range(0, professions.allProfessions.Count)];
+        /*
+        if (dwarfAgeText >20)
+        {
+        currentDwarfProfession = professions.allProfessions[Random.Range(0, professions.allProfessions.Count)];
+        }
+        else
+        {
+            currentDwarfProfession = child;
+        }
+        */
+
 
         dwarfPrefab = currentDwarf.dwarfPrefabs[Random.Range(0, currentDwarf.dwarfPrefabs.Length)];
         dwarfPrefab.name = firstNameText + " " + familyNameText;

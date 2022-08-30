@@ -12,10 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c1dcd2ed4a71a94f8224f7e22fdd23e, type: 3}
   m_Name: Metalworker
   m_EditorClassIdentifier: 
-  Professions: []
   mining: 0
-  masonry: 0
-  stoneDetailing: 0
+  masonry: 1
+  stoneDetailing: 1
   carpentry: 0
   woodCutting: 0
   plantGathering: 0
@@ -41,7 +40,7 @@ MonoBehaviour:
   woodCrafting: 1
   pottery: 0
   gemCutting: 0
-  getSetting: 0
+  gemSetting: 0
   diagnostics: 0
   woundDressing: 0
   patientCare: 0

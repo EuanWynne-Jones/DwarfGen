@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c1dcd2ed4a71a94f8224f7e22fdd23e, type: 3}
   m_Name: Farmer
   m_EditorClassIdentifier: 
-  Professions: []
   mining: 0
   masonry: 0
   stoneDetailing: 0
@@ -22,7 +21,7 @@ MonoBehaviour:
   brewing: 0
   plantProcessing: 1
   fieldFarming: 1
-  beekeeping: 0
+  beekeeping: 1
   spinning: 1
   cooking: 0
   animalCare: 1
@@ -41,7 +40,7 @@ MonoBehaviour:
   woodCrafting: 1
   pottery: 0
   gemCutting: 0
-  getSetting: 0
+  gemSetting: 0
   diagnostics: 0
   woundDressing: 0
   patientCare: 0

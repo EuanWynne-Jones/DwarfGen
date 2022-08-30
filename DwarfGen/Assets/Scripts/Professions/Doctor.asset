@@ -12,13 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c1dcd2ed4a71a94f8224f7e22fdd23e, type: 3}
   m_Name: Doctor
   m_EditorClassIdentifier: 
-  Professions: []
   mining: 0
   masonry: 0
   stoneDetailing: 0
-  carpentry: 1
-  woodCutting: 1
-  plantGathering: 0
+  carpentry: 0
+  woodCutting: 0
+  plantGathering: 1
   brewing: 0
   plantProcessing: 0
   fieldFarming: 0
@@ -38,14 +37,14 @@ MonoBehaviour:
   clothesMaking: 0
   leatherworking: 0
   stoneCrafting: 0
-  woodCrafting: 1
+  woodCrafting: 0
   pottery: 0
   gemCutting: 0
-  getSetting: 0
-  diagnostics: 0
-  woundDressing: 0
-  patientCare: 0
-  surgery: 0
+  gemSetting: 0
+  diagnostics: 1
+  woundDressing: 1
+  patientCare: 1
+  surgery: 1
   recoveringWounded: 1
-  suturing: 0
+  suturing: 1
   hauling: 1

@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c1dcd2ed4a71a94f8224f7e22fdd23e, type: 3}
   m_Name: Cook
   m_EditorClassIdentifier: 
-  Professions: []
   mining: 0
   masonry: 0
   stoneDetailing: 0
@@ -27,7 +26,7 @@ MonoBehaviour:
   cooking: 1
   animalCare: 0
   animalTraining: 0
-  trapping: 0
+  trapping: 1
   butchery: 1
   fishing: 0
   fishCleaning: 0
@@ -41,7 +40,7 @@ MonoBehaviour:
   woodCrafting: 0
   pottery: 0
   gemCutting: 0
-  getSetting: 0
+  gemSetting: 0
   diagnostics: 0
   woundDressing: 0
   patientCare: 0

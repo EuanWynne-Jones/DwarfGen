@@ -12,8 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c1dcd2ed4a71a94f8224f7e22fdd23e, type: 3}
   m_Name: Jeweler
   m_EditorClassIdentifier: 
-  Professions: []
-  mining: 0
+  mining: 1
   masonry: 0
   stoneDetailing: 0
   carpentry: 1
@@ -37,11 +36,11 @@ MonoBehaviour:
   weaponSmithing: 0
   clothesMaking: 0
   leatherworking: 0
-  stoneCrafting: 0
+  stoneCrafting: 1
   woodCrafting: 1
   pottery: 0
   gemCutting: 0
-  getSetting: 0
+  gemSetting: 0
   diagnostics: 0
   woundDressing: 0
   patientCare: 0

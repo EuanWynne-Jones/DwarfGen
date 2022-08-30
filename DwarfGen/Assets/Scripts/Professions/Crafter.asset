@@ -10,20 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c1dcd2ed4a71a94f8224f7e22fdd23e, type: 3}
-  m_Name: Woodworker 1
+  m_Name: Crafter
   m_EditorClassIdentifier: 
-  Professions: []
   mining: 0
   masonry: 0
   stoneDetailing: 0
   carpentry: 1
-  woodCutting: 1
+  woodCutting: 0
   plantGathering: 0
   brewing: 0
   plantProcessing: 0
   fieldFarming: 0
   beekeeping: 0
-  spinning: 0
+  spinning: 1
   cooking: 0
   animalCare: 0
   animalTraining: 0
@@ -35,13 +34,13 @@ MonoBehaviour:
   blacksmithing: 0
   metalCrafting: 0
   weaponSmithing: 0
-  clothesMaking: 0
-  leatherworking: 0
-  stoneCrafting: 0
+  clothesMaking: 1
+  leatherworking: 1
+  stoneCrafting: 1
   woodCrafting: 1
-  pottery: 0
+  pottery: 1
   gemCutting: 0
-  getSetting: 0
+  gemSetting: 0
   diagnostics: 0
   woundDressing: 0
   patientCare: 0

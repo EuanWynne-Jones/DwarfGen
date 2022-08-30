@@ -113,6 +113,7 @@ MonoBehaviour:
   currentDwarf: {fileID: 11400000, guid: 3d1e9bd873f899846bf025084c641ba5, type: 2}
   currentDwarfProfession: {fileID: 0}
   professions: {fileID: 8434861717633809574}
+  child: {fileID: 11400000, guid: bcb0e11e04fc61f4f94d774022c8b6fa, type: 2}
   genderText: 
   firstNameText: 0
   familyNameText: 0
@@ -155,3 +156,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 827bd7a6a289dfc4785c7c2b8a16c5aa, type: 2}
   - {fileID: 11400000, guid: b318594dbb8a38349920ee7152fed800, type: 2}
   - {fileID: 11400000, guid: 7363352f9b734854aa6dc0de0826b297, type: 2}
+  - {fileID: 11400000, guid: bcb0e11e04fc61f4f94d774022c8b6fa, type: 2}
