@@ -109,7 +109,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentDwarf: {fileID: 11400000, guid: 3d1e9bd873f899846bf025084c641ba5, type: 2}
-  nameText: 
+  currentDwarfProfession: {fileID: 11400000, guid: 49e65e911a5357c41948f6c62451079b, type: 2}
+  genderText: 
   firstNameText: 0
   familyNameText: 0
+  professionText: 
+  dwarfAgeText: 0
   dwarfPrefab: {fileID: 1791760066520198965}

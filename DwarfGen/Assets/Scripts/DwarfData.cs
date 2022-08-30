@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 
 public class DwarfData : MonoBehaviour
@@ -8,10 +7,13 @@ public class DwarfData : MonoBehaviour
     // Start is called before the first frame update
  
     public DwarfScriptableObject currentDwarf;
+    public ProfessionScriptableObject currentDwarfProfession;
     public string genderText;
     private string FullNameText;
     public string firstNameText;
     public string familyNameText;
+
+    public string professionText;
 
     public int dwarfAgeText;
     public GameObject dwarfPrefab;
@@ -27,20 +29,21 @@ public class DwarfData : MonoBehaviour
         {
             firstNameText = currentDwarf.MaleFirstNameList[Random.Range(0, currentDwarf.MaleFirstNameList.Length)];
         }
-        else if( genderText == "Female")
-        {
-            firstNameText = currentDwarf.FemaleFirstNameList[Random.Range(0, currentDwarf.FemaleFirstNameList.Length)];
-        }
+            else if( genderText == "Female")
+            {
+                firstNameText = currentDwarf.FemaleFirstNameList[Random.Range(0, currentDwarf.FemaleFirstNameList.Length)];
+            }
+
+        familyNameText = currentDwarf.familyNameList[Random.Range(0, currentDwarf.familyNameList.Length)];
+
+
 
         dwarfAgeText = currentDwarf.dwarfAge = Random.Range(25, 170);
 
-
-    familyNameText = currentDwarf.familyNameList[Random.Range(0, currentDwarf.familyNameList.Length)];
+        professionText = currentDwarfProfession.Professions[Random.Range(0, currentDwarfProfession.Professions.Length)];
 
 
         dwarfPrefab = currentDwarf.dwarfPrefabs[Random.Range(0, currentDwarf.dwarfPrefabs.Length)];
-
-
     }
     private void Update()
     {
@@ -51,7 +54,7 @@ public class DwarfData : MonoBehaviour
     public void DwarfReport()
     {
         string FullNameText = firstNameText + " " + familyNameText;
-        Debug.Log("Dwarf Report: " + FullNameText + ", " + genderText + ", " + dwarfAgeText);
+        Debug.Log("Dwarf Report: " + FullNameText + ", " + genderText + ", " + dwarfAgeText + ", " + professionText);
     }
 
 }

@@ -5,13 +5,15 @@ using UnityEngine;
 public class DwarfSpawnManager : MonoBehaviour
 
 {
-    //public DwarfScriptableObject[] dwarfFirstName;
-    //public DwarfScriptableObject[] dwarfFamilyName;
     public DwarfScriptableObject currentDwarf;
-    //public string dwarfFullName;
     public GameObject dwarfPrefab;
     public Transform spawnPosition;
-    private GameObject clone;
+    private GameObject dwarf;
+    private GameObject FinishedSpawning;
+
+    public int numberOfDwarvesToSpawn = 10;
+    public int spawnedDwarves;
+    public bool canSpawn;
     // Start is called before the first frame update
     private void Awake()
     {
@@ -20,21 +22,32 @@ public class DwarfSpawnManager : MonoBehaviour
     }
     void Start()
     {
-        DwarfSpawn();
+        canSpawn = true;
+        spawnedDwarves = 0;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-
-        ;
+        DwarfSpawn();
     }
     public GameObject DwarfSpawn()
     {
-
-        //dwarfFullName = dwarfFirstName[Random.Range(0, dwarfFirstName.Length)];
-        clone = Instantiate(dwarfPrefab, spawnPosition.position, spawnPosition.rotation);
-        return clone;
+        if(spawnedDwarves < numberOfDwarvesToSpawn)
+        {
+        canSpawn = true;
+            dwarf = Instantiate(dwarfPrefab, spawnPosition.position, spawnPosition.rotation);
+            spawnedDwarves++;
+            return dwarf;
+        }
+        else
+        {
+        canSpawn = false;
+            return null;
+        }
 
     }
+
+
 }
