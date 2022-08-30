@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c1dcd2ed4a71a94f8224f7e22fdd23e, type: 3}
+  m_Name: Miner
+  m_EditorClassIdentifier: 
+  Professions: []
+  mining: 1
+  masonry: 1
+  stoneDetailing: 1
+  carpentry: 0
+  woodCutting: 0
+  plantGathering: 0
+  brewing: 0
+  plantProcessing: 0
+  fieldFarming: 0
+  beekeeping: 0
+  spinning: 0
+  cooking: 0
+  animalCare: 0
+  animalTraining: 0
+  trapping: 0
+  butchery: 0
+  fishing: 0
+  fishCleaning: 0
+  fishDisection: 0
+  blacksmithing: 0
+  metalCrafting: 0
+  weaponSmithing: 0
+  clothesMaking: 0
+  leatherworking: 0
+  stoneCrafting: 0
+  woodCrafting: 1
+  pottery: 0
+  gemCutting: 0
+  getSetting: 0
+  diagnostics: 0
+  woundDressing: 0
+  patientCare: 0
+  surgery: 0
+  recoveringWounded: 1
+  suturing: 0
+  hauling: 1

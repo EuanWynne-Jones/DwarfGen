@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 145519576510238269}
   - component: {fileID: 2978361839993747688}
   - component: {fileID: -9046898604837227904}
+  - component: {fileID: 341276708286558747}
+  - component: {fileID: 8434861717633809574}
   m_Layer: 0
   m_Name: DwarfTest
   m_TagString: Untagged
@@ -109,10 +111,47 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentDwarf: {fileID: 11400000, guid: 3d1e9bd873f899846bf025084c641ba5, type: 2}
-  currentDwarfProfession: {fileID: 11400000, guid: 49e65e911a5357c41948f6c62451079b, type: 2}
+  currentDwarfProfession: {fileID: 0}
+  professions: {fileID: 8434861717633809574}
   genderText: 
   firstNameText: 0
   familyNameText: 0
-  professionText: 
   dwarfAgeText: 0
   dwarfPrefab: {fileID: 1791760066520198965}
+--- !u!114 &341276708286558747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1791760066520198965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66b3d657423a56b43a22b3dcd7622ccc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dwarfData: {fileID: -9046898604837227904}
+  professionScriptableObject: {fileID: 0}
+  currentDwarfSkills: []
+--- !u!114 &8434861717633809574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1791760066520198965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 327f2531f792f6844918769a0e835783, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allProfessions:
+  - {fileID: 11400000, guid: c733f3042d17c004dab14a88ff7557ad, type: 2}
+  - {fileID: 11400000, guid: 42eaacce4aafe5a41a47bf7dfa4071d3, type: 2}
+  - {fileID: 11400000, guid: 9cad27e0792af8046a384c447ad9c610, type: 2}
+  - {fileID: 11400000, guid: 557cbaaae2903d5408a9c7e9c3423445, type: 2}
+  - {fileID: 11400000, guid: 1ae1062f65527204ba05493d4764b0f5, type: 2}
+  - {fileID: 11400000, guid: f2c0049f997730a409f10b09bd9ed675, type: 2}
+  - {fileID: 11400000, guid: 827bd7a6a289dfc4785c7c2b8a16c5aa, type: 2}
+  - {fileID: 11400000, guid: b318594dbb8a38349920ee7152fed800, type: 2}
+  - {fileID: 11400000, guid: 7363352f9b734854aa6dc0de0826b297, type: 2}

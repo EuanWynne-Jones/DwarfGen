@@ -11,6 +11,8 @@ public class DwarfSpawnManager : MonoBehaviour
     private GameObject dwarf;
     private GameObject FinishedSpawning;
 
+    public DwarfData dwarfdata;
+
     public int numberOfDwarvesToSpawn = 10;
     public int spawnedDwarves;
     public bool canSpawn;

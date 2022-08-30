@@ -5,7 +5,8 @@ MonoImporter:
   serializedVersion: 2
   defaultReferences:
   - currentDwarf: {fileID: 11400000, guid: 3d1e9bd873f899846bf025084c641ba5, type: 2}
-  - currentDwarfProfession: {fileID: 11400000, guid: 49e65e911a5357c41948f6c62451079b, type: 2}
+  - currentDwarfProfession: {instanceID: 0}
+  - professions: {fileID: 6190762479291504524, guid: 59a1d476a37eaef4f80584df21ccca91, type: 3}
   - dwarfPrefab: {fileID: 1791760066520198965, guid: 59a1d476a37eaef4f80584df21ccca91, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}

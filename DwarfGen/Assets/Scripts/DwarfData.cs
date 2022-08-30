@@ -8,23 +8,41 @@ public class DwarfData : MonoBehaviour
  
     public DwarfScriptableObject currentDwarf;
     public ProfessionScriptableObject currentDwarfProfession;
+    public ProfessionData professions;
+
+
     public string genderText;
-    private string FullNameText;
     public string firstNameText;
     public string familyNameText;
 
-    public string professionText;
+
 
     public int dwarfAgeText;
     public GameObject dwarfPrefab;
-
+ 
 
     // Start is called before the first frame update
     void Start()
     {
+        DwarfGenerator();
+    }
+    private void Update()
+    {
+        
+        
+    }
+
+    public void DwarfReport()
+    {
+        string FullNameText = firstNameText + " " + familyNameText;
+        string professionText = currentDwarfProfession.name;
+        print("Dwarf Report: " + FullNameText + ", " + genderText + ", " + dwarfAgeText + ", " + professionText);
+    }
+
+    public void DwarfGenerator()
+    {
 
         genderText = currentDwarf.Gender[Random.Range(0, currentDwarf.Gender.Length)];
-
         if (genderText == "Male")
         {
             firstNameText = currentDwarf.MaleFirstNameList[Random.Range(0, currentDwarf.MaleFirstNameList.Length)];
@@ -35,27 +53,15 @@ public class DwarfData : MonoBehaviour
             }
 
         familyNameText = currentDwarf.familyNameList[Random.Range(0, currentDwarf.familyNameList.Length)];
-
-
-
         dwarfAgeText = currentDwarf.dwarfAge = Random.Range(25, 170);
 
-        professionText = currentDwarfProfession.Professions[Random.Range(0, currentDwarfProfession.Professions.Length)];
-
+        currentDwarfProfession = professions.allProfessions[Random.Range(0, professions.allProfessions.Count)];
 
         dwarfPrefab = currentDwarf.dwarfPrefabs[Random.Range(0, currentDwarf.dwarfPrefabs.Length)];
-    }
-    private void Update()
-    {
-        DwarfReport();
-        
+        dwarfPrefab.name = firstNameText + " " + familyNameText;
+       
     }
 
-    public void DwarfReport()
-    {
-        string FullNameText = firstNameText + " " + familyNameText;
-        Debug.Log("Dwarf Report: " + FullNameText + ", " + genderText + ", " + dwarfAgeText + ", " + professionText);
-    }
 
 }
 
