@@ -26,6 +26,7 @@ public class DwarfData : MonoBehaviour
     void Start()
     {
         DwarfGenerator();
+    
     }
     private void Update()
     {

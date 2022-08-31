@@ -134,6 +134,7 @@ MonoBehaviour:
   dwarfData: {fileID: -9046898604837227904}
   professionScriptableObject: {fileID: 0}
   currentDwarfSkills: []
+  skills: []
 --- !u!114 &8434861717633809574
 MonoBehaviour:
   m_ObjectHideFlags: 0

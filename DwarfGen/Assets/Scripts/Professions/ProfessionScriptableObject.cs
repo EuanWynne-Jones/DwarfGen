@@ -10,6 +10,8 @@ public class ProfessionScriptableObject : ScriptableObject
 {
     //work types as bools each indevidual profession has compatable work types / labours
 
+    public List<Skill> skills = new List<Skill>();
+
     [Header("Mining")]
     public bool mining;
 

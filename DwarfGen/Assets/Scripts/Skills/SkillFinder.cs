@@ -9,6 +9,7 @@ public class SkillFinder : MonoBehaviour
     public ProfessionScriptableObject professionScriptableObject;
 
     public List<string> currentDwarfSkills = new List<string>();
+    public List<Skill> skills = new List<Skill>();
     //public List<SkillFinder> currentDwarfSkills = new List<SkillFinder>();
     // Start is called before the first frame update
     void Start()
@@ -19,7 +20,6 @@ public class SkillFinder : MonoBehaviour
     {
         professionScriptableObject = dwarfData.currentDwarfProfession;
 
-        List<Skill> skills = new List<Skill>();
 
         if (professionScriptableObject.mining)
         {
@@ -393,6 +393,7 @@ public class SkillFinder : MonoBehaviour
                // print("Skill List: ");
                //print(skill.Skillname + " " + skill.isTrained);
                 currentDwarfSkills.Add(skill.Skillname);
+                //skills.Add((Skill)skill);
             }
         }
     }

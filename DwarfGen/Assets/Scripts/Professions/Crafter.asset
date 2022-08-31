@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c1dcd2ed4a71a94f8224f7e22fdd23e, type: 3}
   m_Name: Crafter
   m_EditorClassIdentifier: 
+  skills: []
   mining: 0
   masonry: 0
   stoneDetailing: 0
