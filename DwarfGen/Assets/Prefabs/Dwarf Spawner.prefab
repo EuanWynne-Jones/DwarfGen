@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7434297233393909161
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7434297233393909163}
+  - component: {fileID: 7434297233393909160}
+  m_Layer: 0
+  m_Name: Dwarf Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7434297233393909163
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7434297233393909161}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7434297233393909160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7434297233393909161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9da4882e3adf49048858aa24c6ecc4da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  family: {fileID: 2552671830174615714, guid: 44babce7e1738fc4ba001e44c8616fea, type: 3}
+  currentDwarf: {fileID: 11400000, guid: 3d1e9bd873f899846bf025084c641ba5, type: 2}
+  dwarfPrefab: {fileID: 1791760066520198965, guid: 59a1d476a37eaef4f80584df21ccca91, type: 3}
+  spawnPosition: {fileID: 7434297233393909163}
+  dwarf: {fileID: 1791760066520198965, guid: 59a1d476a37eaef4f80584df21ccca91, type: 3}
+  dwarfdata: {fileID: -9046898604837227904, guid: 59a1d476a37eaef4f80584df21ccca91, type: 3}
+  numberOfDwarvesToSpawn: 3
+  spawnedDwarves: 0
+  canSpawn: 0

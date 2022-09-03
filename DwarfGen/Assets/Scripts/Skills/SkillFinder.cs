@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class SkillFinder : MonoBehaviour
 {
-    public DwarfData dwarfData;
+    public DwarfData currentDwarfInfo;
 
-    public ProfessionScriptableObject professionScriptableObject;
+    public ProfessionScriptableObject curretProfession;
 
     public List<string> currentDwarfSkills = new List<string>();
-    public List<Skill> skills = new List<Skill>();
+    public List<Skill> allSkills = new List<Skill>();
     //public List<SkillFinder> currentDwarfSkills = new List<SkillFinder>();
     // Start is called before the first frame update
     void Start()
@@ -18,378 +18,378 @@ public class SkillFinder : MonoBehaviour
     }
     public void Skillchecker()
     {
-        professionScriptableObject = dwarfData.currentDwarfProfession;
+        curretProfession = currentDwarfInfo.currentDwarfProfession;
 
 
-        if (professionScriptableObject.mining)
+        if (curretProfession.mining)
         {
-            skills.Add(new Skill("Mining", true));
+            allSkills.Add(new Skill("Mining", true));
         }
         else
         {
-            skills.Add(new Skill("Mining", false));
+            allSkills.Add(new Skill("Mining", false));
 
         }
 
 
-        if (professionScriptableObject.masonry)
+        if (curretProfession.masonry)
         {
-            skills.Add(new Skill("Masonry", true));
-        }
-        else
-        {
-            skills.Add(new Skill("Masonry", false));
-        }
-
-
-        if (professionScriptableObject.stoneDetailing)
-        {
-            skills.Add(new Skill("Stone Detailing", true));
+            allSkills.Add(new Skill("Masonry", true));
         }
         else
         {
-            skills.Add(new Skill("Stone Detailing", false));
+            allSkills.Add(new Skill("Masonry", false));
         }
 
 
-
-        if (professionScriptableObject.carpentry)
+        if (curretProfession.stoneDetailing)
         {
-            skills.Add(new Skill("Carpentry", true));
-        }
-        else
-        {
-            skills.Add(new Skill("Carpentry", false));
-        }
-
-
-        if (professionScriptableObject.woodCutting)
-        {
-            skills.Add(new Skill("Wood Cutting", true));
+            allSkills.Add(new Skill("Stone Detailing", true));
         }
         else
         {
-            skills.Add(new Skill("Wood Cutting", false));
+            allSkills.Add(new Skill("Stone Detailing", false));
         }
 
 
-        if (professionScriptableObject.plantGathering)
-        {
-            skills.Add(new Skill("Plant Gathering", true));
-        }
-        else
-        {
-            skills.Add(new Skill("Plant Gathering", false));
 
-        }
-
-
-        if (professionScriptableObject.plantProcessing)
+        if (curretProfession.carpentry)
         {
-            skills.Add(new Skill("Plant Processing", true));
+            allSkills.Add(new Skill("Carpentry", true));
         }
         else
         {
-            skills.Add(new Skill("Plant Processing", false));
+            allSkills.Add(new Skill("Carpentry", false));
         }
 
 
-        if (professionScriptableObject.carpentry)
+        if (curretProfession.woodCutting)
         {
-            skills.Add(new Skill("Field Farming", true));
-        }
-        else
-        {
-            skills.Add(new Skill("Field Farming", false));
-        }
-
-
-        if (professionScriptableObject.fieldFarming)
-        {
-            skills.Add(new Skill("Field Farming", true));
+            allSkills.Add(new Skill("Wood Cutting", true));
         }
         else
         {
-            skills.Add(new Skill("Field Farming", false));
-
-        }
-
-        if (professionScriptableObject.beekeeping)
-        {
-
-            skills.Add(new Skill("Beekeeping", true));
-        }
-        else
-        {
-            skills.Add(new Skill("Beekeeping", false));
+            allSkills.Add(new Skill("Wood Cutting", false));
         }
 
 
-        if (professionScriptableObject.spinning)
+        if (curretProfession.plantGathering)
         {
-            skills.Add(new Skill("Spinning", true));
+            allSkills.Add(new Skill("Plant Gathering", true));
         }
         else
         {
-            skills.Add(new Skill("Spinning", false));
+            allSkills.Add(new Skill("Plant Gathering", false));
+
         }
 
 
-        if (professionScriptableObject.cooking)
+        if (curretProfession.plantProcessing)
         {
-            skills.Add(new Skill("Cooking", true));
-        }
-        else
-        {
-            skills.Add(new Skill("Cooking", false));
-        }
-
-
-        if (professionScriptableObject.animalCare)
-        {
-            skills.Add(new Skill("AnimalCare", true));
+            allSkills.Add(new Skill("Plant Processing", true));
         }
         else
         {
-            skills.Add(new Skill("AnimalCare", false));
+            allSkills.Add(new Skill("Plant Processing", false));
         }
 
 
-        if (professionScriptableObject.animalTraining)
+        if (curretProfession.carpentry)
         {
-            skills.Add(new Skill("Animal Training", true));
-        }
-        else
-        {
-            skills.Add(new Skill("Animal Training", false));
-        }
-
-
-        if (professionScriptableObject.trapping)
-        {
-            skills.Add(new Skill("Trapping", true));
+            allSkills.Add(new Skill("Field Farming", true));
         }
         else
         {
-            skills.Add(new Skill("Trapping", false));
+            allSkills.Add(new Skill("Field Farming", false));
         }
 
 
-        if (professionScriptableObject.butchery)
+        if (curretProfession.fieldFarming)
         {
-            skills.Add(new Skill("Butchery", true));
-        }
-        else
-        {
-            skills.Add(new Skill("Butchery", false));
-        }
-
-
-        if (professionScriptableObject.fishing)
-        {
-            skills.Add(new Skill("Fishing", true));
+            allSkills.Add(new Skill("Field Farming", true));
         }
         else
         {
+            allSkills.Add(new Skill("Field Farming", false));
 
-            skills.Add(new Skill("Fishing", false));
         }
 
-        if (professionScriptableObject.fishCleaning)
+        if (curretProfession.beekeeping)
         {
-            skills.Add(new Skill("Fishing Cleaning", true));
+
+            allSkills.Add(new Skill("Beekeeping", true));
+        }
+        else
+        {
+            allSkills.Add(new Skill("Beekeeping", false));
+        }
+
+
+        if (curretProfession.spinning)
+        {
+            allSkills.Add(new Skill("Spinning", true));
+        }
+        else
+        {
+            allSkills.Add(new Skill("Spinning", false));
+        }
+
+
+        if (curretProfession.cooking)
+        {
+            allSkills.Add(new Skill("Cooking", true));
+        }
+        else
+        {
+            allSkills.Add(new Skill("Cooking", false));
+        }
+
+
+        if (curretProfession.animalCare)
+        {
+            allSkills.Add(new Skill("AnimalCare", true));
+        }
+        else
+        {
+            allSkills.Add(new Skill("AnimalCare", false));
+        }
+
+
+        if (curretProfession.animalTraining)
+        {
+            allSkills.Add(new Skill("Animal Training", true));
+        }
+        else
+        {
+            allSkills.Add(new Skill("Animal Training", false));
+        }
+
+
+        if (curretProfession.trapping)
+        {
+            allSkills.Add(new Skill("Trapping", true));
+        }
+        else
+        {
+            allSkills.Add(new Skill("Trapping", false));
+        }
+
+
+        if (curretProfession.butchery)
+        {
+            allSkills.Add(new Skill("Butchery", true));
+        }
+        else
+        {
+            allSkills.Add(new Skill("Butchery", false));
+        }
+
+
+        if (curretProfession.fishing)
+        {
+            allSkills.Add(new Skill("Fishing", true));
         }
         else
         {
 
-            skills.Add(new Skill("Fishing Cleaning", false));
+            allSkills.Add(new Skill("Fishing", false));
         }
 
-        if (professionScriptableObject.fishDisection)
+        if (curretProfession.fishCleaning)
         {
-            skills.Add(new Skill("Fish Disection", true));
-        }
-        else
-        {
-            skills.Add(new Skill("Fish Disection", false));
-        }
-
-
-
-        if (professionScriptableObject.blacksmithing)
-        {
-            skills.Add(new Skill("Blacksmithing", true));
-        }
-        else
-        {
-            skills.Add(new Skill("Blacksmithing", false));
-        }
-
-
-
-
-        if (professionScriptableObject.metalCrafting)
-        {
-            skills.Add(new Skill("Metal Crafting", true));
-        }
-        else
-        {
-            skills.Add(new Skill("Metal Crafting", false));
-        }
-
-
-        if (professionScriptableObject.weaponSmithing)
-        {
-            skills.Add(new Skill("Weapon Smithing", true));
-        }
-        else
-        {
-            skills.Add(new Skill("Weapon Smithing", false));
-        }
-
-
-        if (professionScriptableObject.clothesMaking)
-        {
-            skills.Add(new Skill("Clothes Making", true));
-        }
-        else
-        {
-            skills.Add(new Skill("Clothes Making", false));
-        }
-
-        if (professionScriptableObject.leatherworking)
-        {
-            skills.Add(new Skill("Leatherworking", true));
-        }
-        else
-        {
-            skills.Add(new Skill("Leatherworking", false));
-        }
-
-        if (professionScriptableObject.stoneCrafting)
-        {
-            skills.Add(new Skill("Stone Crafting", true));
-        }
-        else
-        {
-            skills.Add(new Skill("Stone Crafting", false));
-        }
-
-
-        if (professionScriptableObject.woodCrafting)
-        {
-
-            skills.Add(new Skill("Wood Crafting", true));
-        }
-        else
-        {
-            skills.Add(new Skill("Wood Crafting", false));
-        }
-
-
-
-        if (professionScriptableObject.pottery)
-        {
-
-            skills.Add(new Skill("Pottery", true));
-        }
-        else
-        {
-            skills.Add(new Skill("Pottery", false));
-        }
-
-
-
-        if (professionScriptableObject.gemCutting)
-        {
-            skills.Add(new Skill("Gem Cutting", true));
-        }
-        else
-        {
-            skills.Add(new Skill("Gem Cutting", false));
-        }
-
-
-
-        if (professionScriptableObject.gemSetting)
-        {
-            skills.Add(new Skill("Gem Setting", true));
+            allSkills.Add(new Skill("Fishing Cleaning", true));
         }
         else
         {
 
-            skills.Add(new Skill("Gem Setting", false));
+            allSkills.Add(new Skill("Fishing Cleaning", false));
         }
 
-
-
-        if (professionScriptableObject.diagnostics)
+        if (curretProfession.fishDisection)
         {
-            skills.Add(new Skill("Diagnostics", true));
+            allSkills.Add(new Skill("Fish Disection", true));
         }
         else
         {
-            skills.Add(new Skill("Diagnostics", false));
+            allSkills.Add(new Skill("Fish Disection", false));
         }
 
 
-        if (professionScriptableObject.woundDressing)
+
+        if (curretProfession.blacksmithing)
         {
-            skills.Add(new Skill("Wound Dressing", true));
+            allSkills.Add(new Skill("Blacksmithing", true));
         }
         else
         {
-            skills.Add(new Skill("Wound Dressing", false));
+            allSkills.Add(new Skill("Blacksmithing", false));
         }
 
 
 
 
-        if (professionScriptableObject.patientCare)
+        if (curretProfession.metalCrafting)
         {
-            skills.Add(new Skill("Patient Care", true));
+            allSkills.Add(new Skill("Metal Crafting", true));
         }
         else
         {
-            skills.Add(new Skill("Patient Care", false));
+            allSkills.Add(new Skill("Metal Crafting", false));
         }
 
 
-        if (professionScriptableObject.recoveringWounded)
+        if (curretProfession.weaponSmithing)
         {
-            skills.Add(new Skill("Recovering Wounded", true));
+            allSkills.Add(new Skill("Weapon Smithing", true));
         }
         else
         {
-            skills.Add(new Skill("Recovering Wounded", false));
+            allSkills.Add(new Skill("Weapon Smithing", false));
         }
 
 
-
-        if (professionScriptableObject.suturing)
+        if (curretProfession.clothesMaking)
         {
-            skills.Add(new Skill("Suturing", true));
+            allSkills.Add(new Skill("Clothes Making", true));
         }
         else
         {
-            skills.Add(new Skill("Suturing", false));
+            allSkills.Add(new Skill("Clothes Making", false));
         }
 
-
-        if (professionScriptableObject.hauling)
+        if (curretProfession.leatherworking)
         {
-            skills.Add(new Skill("Hauling", true));
+            allSkills.Add(new Skill("Leatherworking", true));
         }
         else
         {
-            skills.Add(new Skill("Hauling", false));
+            allSkills.Add(new Skill("Leatherworking", false));
         }
 
-        foreach(Skill skill in skills)
+        if (curretProfession.stoneCrafting)
+        {
+            allSkills.Add(new Skill("Stone Crafting", true));
+        }
+        else
+        {
+            allSkills.Add(new Skill("Stone Crafting", false));
+        }
+
+
+        if (curretProfession.woodCrafting)
+        {
+
+            allSkills.Add(new Skill("Wood Crafting", true));
+        }
+        else
+        {
+            allSkills.Add(new Skill("Wood Crafting", false));
+        }
+
+
+
+        if (curretProfession.pottery)
+        {
+
+            allSkills.Add(new Skill("Pottery", true));
+        }
+        else
+        {
+            allSkills.Add(new Skill("Pottery", false));
+        }
+
+
+
+        if (curretProfession.gemCutting)
+        {
+            allSkills.Add(new Skill("Gem Cutting", true));
+        }
+        else
+        {
+            allSkills.Add(new Skill("Gem Cutting", false));
+        }
+
+
+
+        if (curretProfession.gemSetting)
+        {
+            allSkills.Add(new Skill("Gem Setting", true));
+        }
+        else
+        {
+
+            allSkills.Add(new Skill("Gem Setting", false));
+        }
+
+
+
+        if (curretProfession.diagnostics)
+        {
+            allSkills.Add(new Skill("Diagnostics", true));
+        }
+        else
+        {
+            allSkills.Add(new Skill("Diagnostics", false));
+        }
+
+
+        if (curretProfession.woundDressing)
+        {
+            allSkills.Add(new Skill("Wound Dressing", true));
+        }
+        else
+        {
+            allSkills.Add(new Skill("Wound Dressing", false));
+        }
+
+
+
+
+        if (curretProfession.patientCare)
+        {
+            allSkills.Add(new Skill("Patient Care", true));
+        }
+        else
+        {
+            allSkills.Add(new Skill("Patient Care", false));
+        }
+
+
+        if (curretProfession.recoveringWounded)
+        {
+            allSkills.Add(new Skill("Recovering Wounded", true));
+        }
+        else
+        {
+            allSkills.Add(new Skill("Recovering Wounded", false));
+        }
+
+
+
+        if (curretProfession.suturing)
+        {
+            allSkills.Add(new Skill("Suturing", true));
+        }
+        else
+        {
+            allSkills.Add(new Skill("Suturing", false));
+        }
+
+
+        if (curretProfession.hauling)
+        {
+            allSkills.Add(new Skill("Hauling", true));
+        }
+        else
+        {
+            allSkills.Add(new Skill("Hauling", false));
+        }
+
+        foreach(Skill skill in allSkills)
         {
             if (skill.isTrained)
             {
-                dwarfData.DwarfReport();
+                currentDwarfInfo.DwarfReport();
                // print("Skill List: ");
                //print(skill.Skillname + " " + skill.isTrained);
                 currentDwarfSkills.Add(skill.Skillname);

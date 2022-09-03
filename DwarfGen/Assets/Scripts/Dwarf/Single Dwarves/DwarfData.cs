@@ -5,8 +5,11 @@ using UnityEngine;
 public class DwarfData : MonoBehaviour
 {
     // Start is called before the first frame update
- 
+
     public DwarfScriptableObject currentDwarf;
+    public FirstName currentDwarfMaleFirstName;
+    public FirstName currentDwarfFemaleFirstName;
+    public LastName currentDwarfFamilyName;
     public ProfessionScriptableObject currentDwarfProfession;
     public ProfessionData professions;
 
@@ -20,12 +23,18 @@ public class DwarfData : MonoBehaviour
 
     public int dwarfAgeText;
     public GameObject dwarfPrefab;
- 
+
+    private void Awake()
+    {
+        //currentDwarf = null;
+        //professions = null;
+        //currentDwarfProfession = null;
+        DwarfGenerator();
+    }
 
     // Start is called before the first frame update
     void Start()
     {
-        DwarfGenerator();
     
     }
     private void Update()
@@ -46,13 +55,13 @@ public class DwarfData : MonoBehaviour
         genderText = currentDwarf.Gender[Random.Range(0, currentDwarf.Gender.Length)];
         if (genderText == "Male")
         {
-            firstNameText = currentDwarf.MaleFirstNameList[Random.Range(0, currentDwarf.MaleFirstNameList.Length)];
+            firstNameText = currentDwarfMaleFirstName.prefix[Random.Range(0, currentDwarfMaleFirstName.prefix.Count)] + currentDwarfMaleFirstName.suffix[Random.Range(0, currentDwarfMaleFirstName.suffix.Count)];
         }
             else if( genderText == "Female")
             {
-                firstNameText = currentDwarf.FemaleFirstNameList[Random.Range(0, currentDwarf.FemaleFirstNameList.Length)];
+            firstNameText = currentDwarfFemaleFirstName.prefix[Random.Range(0, currentDwarfFemaleFirstName.prefix.Count)] + currentDwarfFemaleFirstName.suffix[Random.Range(0, currentDwarfFemaleFirstName.suffix.Count)];
             }
-        familyNameText = currentDwarf.familyNameList[Random.Range(0, currentDwarf.familyNameList.Length)];
+        familyNameText = currentDwarfFamilyName.prefix[Random.Range(0, currentDwarfFamilyName.prefix.Count)] + currentDwarfFamilyName.suffix[Random.Range(0, currentDwarfFamilyName.suffix.Count)];
 
         dwarfAgeText = currentDwarf.dwarfAge = Random.Range(21 , 175);
 
